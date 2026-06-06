@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# 📓 Noted — Colorful Notes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun, colorful notes app built with **React** (frontend) and **Express** (backend). Create, color-code, pin, edit, and set due dates on your notes.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🎨 **Color-coded notes** — 6 color themes per note
+- 📌 **Pin notes** — keep important ones at the top
+- ✏️ **Inline editing** — edit notes without leaving the page
+- 🗓 **Due dates** — set reminders with overdue/today/upcoming badges
+- 🔍 **Search & filter** — find notes instantly
+- 📊 **Stats bar** — see total, pinned, and due-today counts at a glance
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+| Layer    | Tech              |
+|----------|-------------------|
+| Frontend | React, CSS-in-JS  |
+| Backend  | Node.js, Express  |
+| Icons    | Tabler Icons      |
+| Fonts    | Nunito (Google Fonts) |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js v16+
+- npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/YOUR_USERNAME/notes-app.git
+cd notes-app
+```
 
-### `npm run eject`
+### 2. Start the backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+cd server
+npm install
+node server.js
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The backend runs on `http://localhost:5000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Start the frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd client
+npm install
+npm start
+```
 
-## Learn More
+The app opens at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📡 API Endpoints
 
-### Code Splitting
+| Method | Endpoint          | Description       |
+|--------|-------------------|-------------------|
+| GET    | `/notes`          | Get all notes     |
+| POST   | `/notes`          | Create a note     |
+| PATCH  | `/notes/:id`      | Edit or pin a note|
+| DELETE | `/notes/:id`      | Delete a note     |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+notes-app/
+├── client/
+│   ├── public/
+│   │   └── index.html        # Font & icon CDN links go here
+│   └── src/
+│       ├── App.jsx            # Main React component
+│       └── index.js
+├── server/
+│   └── server.js             # Express API
+└── README.md
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌐 Deployment
 
-### Advanced Configuration
+### Frontend → Vercel
+```bash
+npm install -g vercel
+vercel
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Frontend → Netlify
+```bash
+npm run build
+# drag the build/ folder to netlify.com/drop
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📸 Preview
 
-### `npm run build` fails to minify
+> Color-coded sticky notes with due date badges, inline editing, and a fun playful UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📄 License
+
+MIT — free to use and modify.
+
